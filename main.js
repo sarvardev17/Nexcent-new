@@ -47,12 +47,11 @@ setInterval(function (){
   changeSlide()
 }, 3000) ;
 
-// ===== MODAL =====
-let signupBtn = document.querySelector(".signup");
+let signupbtn = document.querySelector(".signupbtn");
 let modal = document.querySelector("#modal");
-let modalClose = document.querySelector("#modalClose");
+let modalClose = document.getElementById("modalClose");
 
-signupbtn.addEventListener("click", function (e) {
+signupbtn.addEventListener("click" ,   function (e) {
   e.preventDefault();
   modal.classList.add("show-modal");
 });
@@ -65,4 +64,34 @@ modal.addEventListener("click", function (e) {
   if (e.target === modal) {
     modal.classList.remove("show-modal");
   }
+});
+
+
+
+
+let loginbtn = document.querySelector(".loginbtn");
+let loginmodal = document.querySelector("#loginModal");
+let loginModalClose = document.getElementById("loginClose");
+
+loginbtn.addEventListener("click" ,   function (e) {
+  e.preventDefault();
+  loginmodal.classList.add("show-modal");
+});
+
+loginModalClose.addEventListener("click", function () {
+  loginmodal.classList.remove("show-modal");
+});
+
+loginmodal.addEventListener("click", function (e) {
+  if (e.target === loginmodal) {
+    loginmodal.classList.remove("show-modal");
+  }
+});
+
+let goSignup = document.getElementById("loginSignup");
+
+goSignup.addEventListener("click", function (e) {
+  e.preventDefault();
+  loginmodal.classList.remove("show-modal");
+  modal.classList.add("show-modal");
 });
