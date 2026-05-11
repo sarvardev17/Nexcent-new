@@ -40,13 +40,14 @@ body {
   gap: 5px;
 }
 
-.top-middle {
+.menu {
   display: flex;
   gap: 40px;
   align-items: center;
+  
 }
 
-.top-middle a {
+.menu li a {
   text-decoration: none;
   color: #18191F;
   font-size: 16px;
@@ -198,7 +199,7 @@ height: auto;
     margin: 20px;
   }
 
-  .top-middle {
+   .menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -211,13 +212,14 @@ height: auto;
     transform: translateX(-100%);
     transition: 0.3s;
     align-items: flex-start;
+    z-index: 1000;
   }
 
-  .top-middle.show-menu {
+  .menu.show-menu {
     transform: translateX(0);
   }
 
-  .top-middle.show-menu .close {
+  .menu.show-menu .close {
     display: block;
   }
 }
@@ -487,14 +489,14 @@ padding: 70px 0;
   align-items: center;
   justify-content: space-between;
 }
-.how{
+/* .how{
 font-family: Inter;
 font-weight: 600;
 font-size: 36px;
 line-height: 44px;
 letter-spacing: 0%;
 color: #4D4D4D;
-}
+} */
 .paragrf{
 font-weight: 400;
 margin-top: 18px;
@@ -530,6 +532,7 @@ font-weight: 400;
 font-size: 36px;
 line-height: 44px;
 color: #4D4D4D;
+font-family: sans-serif
 }
   .design{
   padding: 20px 0px;
@@ -940,4 +943,108 @@ position: relative;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+
+
+button,
+a,
+.card,
+.stat-item,
+.pixel-right button,
+.disignsbtn,
+.cta button,
+.modal__btn,
+.loginbtn,
+.signupbtn {
+  transition: all 0.3s ease;
+}
+
+
+
+.menu li a,
+.top-middle a {
+  transition: 0.3s;
+}
+
+.menu li a:hover,
+.top-middle a:hover {
+  color: #4CAF4F;
+}
+
+
+
+.loginbtn:hover {
+  background-color: #e8f5e9;
+  transform: translateY(-2px);
+}
+
+.signupbtn:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+
+.header-btn:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(76, 175, 79, 0.3);
+}
+
+
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.pixel-right button:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+
+.stat-item:hover {
+  transform: scale(1.05);
+}
+
+
+
+.disignsbtn:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+
+
+.footer-col a {
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #4CAF4F;
+  transform: translateX(5px);
+}
+
+
+.cta button:hover {
+  background-color: #43a047;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(76, 175, 79, 0.3);
+}
+
+*/
+
+.modal__btn:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(76, 175, 79, 0.3);
+}
+
+
+.modal__box input:focus {
+  border-color: #4CAF4F;
+  box-shadow: 0 0 0 4px rgba(76, 175, 79, 0.15);
 }
